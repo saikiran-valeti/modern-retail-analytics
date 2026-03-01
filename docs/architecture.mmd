@@ -1,0 +1,7 @@
+flowchart TB
+    A["SNOWFLAKE_SAMPLE_DATA.TPCH_SF1"] --> B["Bronze Layer"]
+    B --> C["Silver Layer"]
+    C --> D["Gold Layer - Star Schema"]
+    D --> E["Metabase Dashboard"]
+    F["GitHub Push"] --> G["GitHub Actions CI/CD"]
+    G --> B & C & D

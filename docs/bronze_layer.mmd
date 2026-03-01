@@ -1,0 +1,13 @@
+flowchart LR
+
+    A[SNOWFLAKE_SAMPLE_DATA.TPCH_SF1] --> B[BRONZE Layer]
+
+    B --> C[Customer]
+    B --> D[Orders]
+    B --> E[Lineitem]
+    B --> F[Part]
+    B --> G[Supplier]
+    B --> H[Nation]
+    B --> I[Region]
+
+    I --> J[Row Count Validation]
